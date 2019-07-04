@@ -10,29 +10,21 @@ namespace task_0_3
 
             while ((N <= 0) || (N % 2 == 0))
             {
-                try
-                {
-                    Console.Write("Введите положительное нечетное целое число N: ");
-                    N = int.Parse(Console.ReadLine());
-                    Console.WriteLine("");
-                }
-                catch
-                {
-                }
+                Console.Write("Введите положительное нечетное целое число N: ");
+                int.TryParse(Console.ReadLine(), out N);
+                Console.WriteLine("");
+
+                if ((N <= 0) || (N % 2 == 0))
+                    Console.WriteLine("Введены неверные значения");
             }
+
             for (int i = 1; i <= N; i++)
             {
                 for (int j = 1; j <= N; j++)
-                {
-                    if ((i == (N / 2)+1) && (j == (N / 2)+1))
-                    {
+                    if ((i == (N / 2) + 1) && (j == (N / 2) + 1))
                         Console.Write("  ");
-                    }
                     else
-                    {
                         Console.Write("* ");
-                    }
-                }
                 Console.Write("\n");
             }
         }

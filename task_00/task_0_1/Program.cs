@@ -6,18 +6,17 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число N: ");
-            int.TryParse(Console.ReadLine(), out int N);
-            Console.WriteLine("");
+            int N = 0;
 
             while (N <= 0)
             {
-                Console.Write("Число N не положительное." + "\n" + "Введите положительное число N: ");
-
-                int.TryParse(Console.ReadLine(), out int val);
-                N = val;
-
+                Console.Write("Введите число N: ");
+                int.TryParse(Console.ReadLine(), out N);
                 Console.WriteLine("");
+
+                if (N <= 0)
+                    Console.WriteLine("Введены неверные значения");
+
             }
 
             Console.WriteLine(WriteNumbers(N));
@@ -25,17 +24,13 @@ namespace test
         static string WriteNumbers(int N)
         {
             string yourString = "";
+
             for (int i = 1; i <= N; i++)
-            {
                 if (i == N)
-                {
                     yourString += i.ToString();
-                }
                 else
-                {
                     yourString += i.ToString() + ", ";
-                }
-            }
+
             return yourString;
         }
     }
