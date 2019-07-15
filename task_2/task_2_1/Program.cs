@@ -73,13 +73,11 @@ namespace task_2_1
             set
             {
                 if (value <= 0)
-                    throw new ArgumentException("Радиус должен быть неотрецательным.");
+                    throw new ArgumentException("Радиус должен быть положительным.");
                 else
                     _r = value;
             }
         }
-        public int GetRadius() => _r;
-
         public double GetLength() => 2 * Math.PI * Radius;
         public double GetSquare() => Math.PI * Radius * Radius;
     }
