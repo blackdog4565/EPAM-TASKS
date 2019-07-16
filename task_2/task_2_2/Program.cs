@@ -14,20 +14,24 @@ namespace task_2_2
 
                 var t = new Triangle();
 
-                Console.Write("Введите стороны треугольника:\nA = ");
-                int.TryParse(Console.ReadLine(), out int newA);
+                do
+                {
+                    Console.Write("Введите стороны треугольника:\nA = ");
+                    int.TryParse(Console.ReadLine(), out int newA);
 
-                t.A = newA;
+                    t.A = newA;
 
-                Console.Write("B = ");
-                int.TryParse(Console.ReadLine(), out int newB);
+                    Console.Write("B = ");
+                    int.TryParse(Console.ReadLine(), out int newB);
 
-                t.B = newB;
+                    t.B = newB;
 
-                Console.Write("C = ");
-                int.TryParse(Console.ReadLine(), out int newC);
+                    Console.Write("C = ");
+                    int.TryParse(Console.ReadLine(), out int newC);
 
-                t.C = newC;
+                    t.C = newC;
+
+                } while (t.CheckTriangle() == false);
 
                 while (choiceAction < 3)
                 {
@@ -77,7 +81,6 @@ namespace task_2_2
                     _a = value;
             }
         }
-
         public int B
         {
             get
@@ -105,6 +108,16 @@ namespace task_2_2
                 else
                     _с = value;
             }
+        }
+        public bool CheckTriangle()
+        {
+            if ((A >= B + C) || (B >= A + C) || (C >= A + B))
+            {
+                Console.WriteLine("Введите новые значения! Одна сторона не может быть больше суммы двух других.");
+                return false;
+            }
+            else
+                return true;
         }
         public double GetPerimeter() => A + B + C;
         public double HalfPerimeter() => GetPerimeter() / 2;
