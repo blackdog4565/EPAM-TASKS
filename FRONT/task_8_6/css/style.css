@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.body{
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  background-color: black;
+}
+.block{
+  display: flex;
+}
+.bar{
+  background: repeating-linear-gradient(180deg, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 1px, rgba(255,0,0,1) 1px, rgba(255,0,0,1) 25px, rgba(0,0,0,1) 25px);
+  width: 40px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 5px 5px 0 0;
+}
+.bar_1 { height: 100px; }
+.bar_2 { height: 50px; }
+.bar_3 { height: 200px; }
+.bar_4 { height: 250px; }
+.bar_5 { height: 125px; }
+.bar_6 { height: 75px; }
+
