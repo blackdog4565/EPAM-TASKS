@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.body{
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  background-color: black;
+}
+.topic{
+  background-color: black;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  top: -14px;
+  left: -14px;
+}
+.topic-h2{
+  color: coral;
+  position: relative;
+  z-index: 2;
+}
+.topic::before{
+  content: '';
+  background-color: black;
+  width: 30px;
+  height: 62px;
+  transform: rotate(30deg);
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 91px;
+  z-index: 1;
+}
+.block{
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 0px 0px 10px 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(201,201,201,1) 100%);
+}
+.text{
+  font-size: 17px;
+}

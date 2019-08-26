@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Блок с тенью</title>
+  <style>
+   body { font: 14px Arial, Helvetica, Verdana, sans-serif; }
+   .block h2, .content {
+    background: #fff7e1; /* Цвет фона */
+    border: 1px solid #f15a22; /* Параметры рамки */
+   }
+   .block h2 {
+    font-size: 16px; /* Размер текста */
+    display: inline-block; /* Заголовок равен ширине текста */
+    position: relative; /* Относительное позиционирование */
+    border-bottom: none; /* Убираем внизу линию */
+    margin-bottom: -1px; /* Сдвигаем вверх на толщину линии */
+    padding: 5px 10px; /* Поля вокруг заголовка */
+   }
+   .block h2::after {
+    content: ''; /* Добавляем пустое содержание для тени */
+    display: block; /* Блочный элемент */
+    position: absolute; /* Абсолютное позиционирование */
+    top: -1px; bottom: 0;
+    left: -1px; right: -1px; /* Тень чуть больше ширины и высоты заголовка */
+    z-index: -1; /* Тень под блоком текста */ 
+   }
+   .content {
+    padding: 10px; /* Поля вокруг текста */
+    min-height: 100px; /* Минимальная высота */
+   }
+   .block h2::after, .content {
+    box-shadow: 0 0 7px #666; /* Тень */
+   }
+  </style>
+ </head>
+ <body>
+  <div class="block">
+    <h2>Заголовок</h2>
+    <div class="content">
+     Содержимое блока
+    </div>
+  </div>
+ </body>
+</html>

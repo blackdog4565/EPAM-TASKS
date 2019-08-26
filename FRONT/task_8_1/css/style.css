@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.menu{
+  color: #880000;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #F9E497;
+  box-shadow: 5px 5px #880000;
+  padding: 5px;
+  max-width: 200px;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+.menu__element{
+  padding: 3px 0px 3px 0px;
+  line-height: 20px;
+}
