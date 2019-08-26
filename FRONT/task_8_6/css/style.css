@@ -12,7 +12,7 @@
   display: flex;
 }
 .bar{
-  background: repeating-linear-gradient(180deg, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 1px, rgba(255,0,0,1) 1px, rgba(255,0,0,1) 25px, rgba(0,0,0,1) 25px);
+  background: repeating-linear-gradient(180deg, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 1px, rgba(255,0,0,0) 1px, rgba(255,0,0,0) 25px, rgba(0,0,0,0) 25px), linear-gradient(360deg, rgba(255,0,0,1) 1%, rgba(148,0,0,1) 100%);
   width: 40px;
   display: inline-block;
   margin-right: 5px;
