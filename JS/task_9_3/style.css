@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+  
+}
+.column {
+  flex-direction: column;
+}
+.table {
+  width: 100px;
+}
+.table-elements {
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+.text {
+  text-align: center;
+}
+.text-in-div {
+  display: none;
+}
+.buttons {
+  margin-top: 20px;
+
+}
+.label {
+  text-align: center;
+}
